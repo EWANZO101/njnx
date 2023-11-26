@@ -1,0 +1,12 @@
+server {
+    listen 8083;
+    server_name www.swiftpeakhosting.co.uk;  # Add your domain here
+
+    root /path/to/astrowind;  # Replace with the path to the 'astrowind' directory
+
+    index index.html index.htm;  # Add any other appropriate index files if needed
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}

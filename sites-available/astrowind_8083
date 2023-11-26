@@ -1,0 +1,11 @@
+server {
+    listen 8083;
+    server_name www.swiftpeakhosting.co.uk;  # Change this to your domain if applicable
+
+    root /var/www/astrowind/;
+    index index.html index.htm;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
